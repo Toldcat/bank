@@ -1,0 +1,12 @@
+version: "1"
+packages:
+  - name: "db"
+    path: "./db/sqlc" #generated golang code location
+    queries: "./db/query/" #query files location
+    schema: "./db/migrations/" #schema location
+    engine: "postgresql"
+    emit_json_tags: true #add json tags
+    emit_prepared_queries: false #optimise performance
+    emit_interface: false
+    emit_exact_table_names: false #singularise table names if false
+    emit_empty_slices: false
